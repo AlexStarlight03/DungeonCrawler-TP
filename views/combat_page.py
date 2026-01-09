@@ -79,7 +79,7 @@ class CombatPage(QWidget):
             score = self.level * random.randint(25, 50)
             gold = random.randint(1, 10) * self.level
             self.label_help.show()
-            self.label_help.setText(f"🏆 Victoiry ! You gain {score} xp and {gold} gold!")
+            self.label_help.setText(f"🏆 Victory ! You gain {score} xp and {gold} gold!")
             self.stats['xp'] += score
             self.stats['gold'] += gold
             if self.stats['xp'] >= 100 * self.level:
