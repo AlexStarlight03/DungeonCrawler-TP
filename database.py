@@ -41,7 +41,6 @@ class Dungeons(BaseModel):
 
 
 def init_database():
-    """Initialise la connexion et crée les tables"""
     try: 
         db.connect(reuse_if_open=True)
     except Exception as e:
@@ -52,13 +51,11 @@ def init_database():
     print("✅ Base de données initialisée")
 
 def close_database():
-    """Ferme la connexion"""
     if db and not db.is_closed():
         db.close()
         print("🔌 Connexion fermée")
 
 def init_monsters():
-    """Initialise les monstres dans la base de données s'ils n'existent pas"""
     monster_list = [
         {'name': 'Goblin', 'img_url': 'ressources/goblin.png', 'hp_base': 50, 'attack': 10, 'xp_reward': 20},
         {'name': 'Orc', 'img_url': 'ressources/orc.png', 'hp_base': 80, 'attack': 20, 'xp_reward': 40},
@@ -77,8 +74,6 @@ def init_monsters():
                     'xp_reward': monster['xp_reward'],
                 }
             )
-            if created:
-                print(f"✅ Monstre ajouté: {monster['name']}")
         except Exception as e:
             print(f"❌ Erreur lors de l'ajout du monstre {monster['name']}: {e}")
 
@@ -94,7 +89,6 @@ def create_monster(level):
 
 def save_player(player_name, character_class):
     try:
-        # Set class-specific defaults
         if character_class == 'Warrior':
             hp_max = 150
             attack = 15
@@ -161,7 +155,6 @@ def player_exists(player_name):
         return False
     
 def save_stats(player_name, level, xp, gold, hp_current, hp_max, attack):
-    """Met à jour les statistiques d'un joueur"""
     try:
         new_stats = (
             Heroes

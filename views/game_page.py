@@ -61,6 +61,7 @@ class GamePage(QWidget):
             self.stats['hp_current'] = hp_max
             StatsController.update_lifebar(self.lifebar, self.stats['hp_current'], self.stats['hp_max'], self.full_width)
         else:
+            self.inn_error.show()
             self.inn_error.setText("⚠️ Not enough gold to rest!")
 
     def on_action_clicked(self, idx):

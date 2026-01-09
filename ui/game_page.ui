@@ -166,7 +166,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Level 1</string>
+    <string>0xp needed</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_level2">
@@ -184,7 +184,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Level 2</string>
+    <string>100xp needed</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_level3">
@@ -202,7 +202,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Level 3</string>
+    <string>200xp needed</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_level4">
@@ -220,7 +220,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Level 4</string>
+    <string>300xp needed</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_level5">
@@ -238,7 +238,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Level 5</string>
+    <string>400xp needed</string>
    </property>
   </widget>
   <widget class="QLabel" name="gold_label">
@@ -674,7 +674,6 @@
     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <zorder>inn_error</zorder>
   <zorder>background_wall</zorder>
   <zorder>label_2</zorder>
   <zorder>label</zorder>
@@ -699,6 +698,7 @@
   <zorder>lifebar</zorder>
   <zorder>level_entry</zorder>
   <zorder>hp_entry</zorder>
+  <zorder>inn_error</zorder>
  </widget>
  <resources/>
  <connections/>
