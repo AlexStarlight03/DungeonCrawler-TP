@@ -1,0 +1,11 @@
+[project]
+name = "dungeoncrawler-tp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "designer>=0.6.6",
+    "pyqt6-tools>=6.4.2.3.3",
+    "setuptools>=80.9.0",
+]
